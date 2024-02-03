@@ -21,8 +21,6 @@ public class Shooter extends SubsystemBase {
                 2);
         MotorsLayout.add("Shooter Motor", m_shooterMotor);
         MotorsLayout.add("Shooter Motor 2", m_shooterMotor2);
-        m_shooterMotor2.follow(m_shooterMotor);
-        m_shooterMotor.setInverted(false);
         Runnable disable = () -> {
             m_shooterMotor.set(0);
             m_shooterMotor2.set(0);
@@ -31,11 +29,18 @@ public class Shooter extends SubsystemBase {
     }
 
     public Command speakerShoot(DoubleSupplier speed) {
-        return run(() -> m_shooterMotor.set(speed.getAsDouble()));
+        return run(() -> {
+            m_shooterMotor.set(speed.getAsDouble());
+            m_shooterMotor2.set(speed.getAsDouble());
+        }).withName("Speaker Shoot!");
+
     }
 
     public Command ampShoot(DoubleSupplier speed) {
-        return run(() -> m_shooterMotor.set(speed.getAsDouble()));
+        return run(() -> {
+            m_shooterMotor.set(speed.getAsDouble());
+            m_shooterMotor2.set(speed.getAsDouble());
+        }).withName("Amp Shoot!");
     }
 
 }

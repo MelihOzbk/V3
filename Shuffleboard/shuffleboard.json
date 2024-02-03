@@ -1,0 +1,579 @@
+{
+  "tabPane": [
+    {
+      "title": "SmartDashboard",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "SmartDashboard/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {}
+      }
+    },
+    {
+      "title": "LiveWindow",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "LiveWindow/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {}
+      }
+    },
+    {
+      "title": "Shuffleboard",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "network_table:///Shuffleboard/",
+      "widgetPane": {
+        "gridSize": 64.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 1,
+        "tiles": {
+          "0,6": {
+            "size": [
+              9,
+              5
+            ],
+            "content": {
+              "_type": "Differential Drivebase",
+              "_source0": "network_table:///Shuffleboard/Drivebase/Tank Drive",
+              "_title": "Drivebase/Tank Drive",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Wheels/Number of wheels": 4,
+              "Wheels/Wheel diameter": 80.0,
+              "Visuals/Show velocity vectors": true
+            }
+          },
+          "0,0": {
+            "size": [
+              9,
+              6
+            ],
+            "content": {
+              "_type": "List Layout",
+              "_title": "List Layout",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Basic Subsystem",
+                  "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Drive",
+                  "_title": "Subsystems/Subsystem/Drive",
+                  "_glyph": 148,
+                  "_showGlyph": false
+                },
+                {
+                  "_type": "Basic Subsystem",
+                  "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Elevator",
+                  "_title": "Subsystems/Subsystem/Elevator",
+                  "_glyph": 148,
+                  "_showGlyph": false
+                },
+                {
+                  "_type": "Basic Subsystem",
+                  "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Shooter",
+                  "_title": "Subsystems/Subsystem/Shooter",
+                  "_glyph": 148,
+                  "_showGlyph": false
+                },
+                {
+                  "_type": "Basic Subsystem",
+                  "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Intake",
+                  "_title": "Subsystems/Subsystem/Intake",
+                  "_glyph": 148,
+                  "_showGlyph": false
+                }
+              ]
+            }
+          },
+          "18,0": {
+            "size": [
+              6,
+              11
+            ],
+            "content": {
+              "_type": "List Layout",
+              "_title": "Hopörler ve Amfi Atış Hızlarının Ayarlanması",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/SL-Speed",
+                  "_title": "Speed/SL-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/AS-Speed",
+                  "_title": "Speed/AS-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/AL-Speed",
+                  "_title": "Speed/AL-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor/Value",
+                  "_title": "Shuffleboard/Shooter/Motors/Shooter Motor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor 2/Value",
+                  "_title": "Shuffleboard/Shooter/Motors/Shooter Motor 2/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Intake/Motors/Slider Motor/Value",
+                  "_title": "Shuffleboard/Intake/Motors/Slider Motor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
+                  "_title": "Speed/SP-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                }
+              ]
+            }
+          },
+          "13,0": {
+            "size": [
+              5,
+              7
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Tırmanma Sistemi",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Voltage View",
+                  "_source0": "network_table:///Shuffleboard/Elevator/Sensors/Elevator IR Sensor",
+                  "_title": "Elevator/Sensors/Elevator IR Sensor",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": 0.0,
+                  "Range/Max": 5.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Orientation": "HORIZONTAL",
+                  "Visuals/Number of tick marks": 5
+                },
+                {
+                  "_type": "Number Slider",
+                  "_title": "Speed/E-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/E-Speed",
+                  "_title": "Shuffleboard/Speed/E-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Elevator/Motors/Elevator Motor/Value",
+                  "_title": "Shuffleboard/Elevator/Motors/Elevator Motor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                }
+              ]
+            }
+          },
+          "13,7": {
+            "size": [
+              5,
+              4
+            ],
+            "content": {
+              "_type": "Basic FMS Info",
+              "_source0": "network_table:///FMSInfo",
+              "_title": "FMS Bilgisi",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "9,0": {
+            "size": [
+              4,
+              11
+            ],
+            "content": {
+              "_type": "Subsystem Layout",
+              "_title": "Intake Sistemi",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Toggle Button",
+                  "_source0": "network_table:///Shuffleboard/Auto Control/Auto Intake/OTO.INTAKE DURUMU",
+                  "_title": "Auto Control/Auto Intake/OTO.INTAKE DURUMU",
+                  "_glyph": 148,
+                  "_showGlyph": false
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Intake/Motors/Slider Motor/Value",
+                  "_title": "Shuffleboard/Intake/Motors/Slider Motor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Intake/Motors/Intake Motor/Value",
+                  "_title": "Shuffleboard/Intake/Motors/Intake Motor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///Shuffleboard/Intake/IR Sensors/Intake IR Sensor/Value",
+                  "_title": "Intake/IR Sensors/Intake IR Sensor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///Shuffleboard/Intake/IR Sensors/Slider IR Sensor/Value",
+                  "_title": "Intake/IR Sensors/Slider IR Sensor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "TEST ROBOT KONTROL",
+      "autoPopulate": false,
+      "autoPopulatePrefix": "G",
+      "widgetPane": {
+        "gridSize": 32.0,
+        "showGrid": true,
+        "hgap": 32.0,
+        "vgap": 32.0,
+        "titleType": 1,
+        "tiles": {
+          "24,0": {
+            "size": [
+              6,
+              14
+            ],
+            "content": {
+              "_type": "List Layout",
+              "_title": "Hopörler ve Amfi Hızlarının Ayarlanması",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/AL-Speed",
+                  "_title": "Amfi Atışı için Slider Hızı",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/AS-Speed",
+                  "_title": "Amfi atışı için Shooter Hızı",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/SL-Speed",
+                  "_title": "Speaker atışı için Slider Hızı",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
+                  "_title": "Speaker atışı için Shooter Hızı",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor/Value",
+                  "_title": "Shooter 1. Motor",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor 2/Value",
+                  "_title": "Shooter 2. Motor",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Intake/Motors/Slider Motor/Value",
+                  "_title": "Slider Motoru",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                }
+              ]
+            }
+          },
+          "13,0": {
+            "size": [
+              5,
+              14
+            ],
+            "content": {
+              "_type": "List Layout",
+              "_title": "INTAKE Sensörleri Ve Oto Intake Durumu",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "BOTTOM",
+              "_children": [
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///Shuffleboard/Auto Control/Auto Intake/OTO.INTAKE DURUMU",
+                  "_title": "/Shuffleboard/Auto Control/Auto Intake/OTO.INTAKE DURUMU",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Motor Controller",
+                  "_source0": "network_table:///Shuffleboard/Intake/Motors/Slider Motor",
+                  "_title": "/Shuffleboard/Intake/Motors/Slider Motor",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Motor Controller",
+                  "_source0": "network_table:///Shuffleboard/Intake/Motors/Intake Motor",
+                  "_title": "/Shuffleboard/Intake/Motors/Intake Motor",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///Shuffleboard/Intake/IR Sensors/Intake IR Sensor/Value",
+                  "_title": "/Shuffleboard/Intake/IR Sensors/Intake IR Sensor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                },
+                {
+                  "_type": "Boolean Box",
+                  "_source0": "network_table:///Shuffleboard/Intake/IR Sensors/Slider IR Sensor/Value",
+                  "_title": "/Shuffleboard/Intake/IR Sensors/Slider IR Sensor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Colors/Color when true": "#7CFC00FF",
+                  "Colors/Color when false": "#8B0000FF"
+                }
+              ]
+            }
+          },
+          "18,0": {
+            "size": [
+              6,
+              9
+            ],
+            "content": {
+              "_type": "List Layout",
+              "_title": "Elevator Sistemi",
+              "_glyph": 149,
+              "_showGlyph": false,
+              "Layout/Label position": "TOP",
+              "_children": [
+                {
+                  "_type": "Number Bar",
+                  "_source0": "network_table:///Shuffleboard/Elevator/Motors/Elevator Motor/Value",
+                  "_title": "Shuffleboard/Elevator/Motors/Elevator Motor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": -1.0,
+                  "Range/Max": 1.0,
+                  "Range/Center": 0.0,
+                  "Visuals/Num tick marks": 5,
+                  "Visuals/Show text": true,
+                  "Visuals/Orientation": "HORIZONTAL"
+                },
+                {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/E-Speed",
+                  "_title": "Shuffleboard/Speed/E-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Simple Dial",
+                  "_source0": "network_table:///Shuffleboard/Elevator/Sensors/Elevator IR Sensor/Value",
+                  "_title": "Shuffleboard/Elevator/Sensors/Elevator IR Sensor/Value",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Range/Min": 0.0,
+                  "Range/Max": 5.0,
+                  "Visuals/Show value": true
+                }
+              ]
+            }
+          },
+          "18,9": {
+            "size": [
+              6,
+              5
+            ],
+            "content": {
+              "_type": "Basic FMS Info",
+              "_source0": "network_table:///FMSInfo",
+              "_title": "/FMSInfo",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          }
+        }
+      }
+    }
+  ],
+  "windowGeometry": {
+    "x": -8.0,
+    "y": -8.0,
+    "width": 1936.0,
+    "height": 1056.0
+  }
+}

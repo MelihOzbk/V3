@@ -23,10 +23,10 @@ public class Drive extends SubsystemBase {
         driveBaseTab.add("Tank Drive", m_Robot);
         m_leftMotor2.follow(m_leftMotor);
         m_rightMotor2.follow(m_rightMotor);
-        m_rightMotor.setInverted(true);
+        m_rightMotor.setInverted(false);
     }
 
     public Command arcadeDrive(DoubleSupplier forward, DoubleSupplier rotation) {
-        return run(() -> m_Robot.arcadeDrive(forward.getAsDouble(), rotation.getAsDouble()));
+        return run(() -> m_Robot.arcadeDrive(forward.getAsDouble(), rotation.getAsDouble())).withName("Arcade Drive!");
     }
 }

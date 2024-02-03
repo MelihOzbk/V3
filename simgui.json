@@ -1,5 +1,10 @@
 {
   "HALProvider": {
+    "Analog Inputs": {
+      "window": {
+        "visible": true
+      }
+    },
     "DIO": {
       "window": {
         "visible": true
@@ -16,6 +21,21 @@
           "open": true
         }
       },
+      "Victor SPX[5]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Victor SPX[6]": {
+        "header": {
+          "open": true
+        }
+      },
+      "Victor SPX[7]": {
+        "header": {
+          "open": true
+        }
+      },
       "Victor SPX[8]": {
         "header": {
           "open": true
@@ -25,14 +45,31 @@
         "header": {
           "open": true
         }
+      },
+      "window": {
+        "visible": false
       }
     }
   },
   "NTProvider": {
     "types": {
       "/FMSInfo": "FMSInfo",
+      "/Shuffleboard/Auto Control/Subsystem/Drive": "Subsystem",
+      "/Shuffleboard/Auto Control/Subsystem/Elevator": "Subsystem",
+      "/Shuffleboard/Auto Control/Subsystem/Intake": "Subsystem",
+      "/Shuffleboard/Auto Control/Subsystem/Shooter": "Subsystem",
+      "/Shuffleboard/Drivebase/Tank Drive": "DifferentialDrive",
+      "/Shuffleboard/Elevator/Motors/Elevator Motor": "Motor Controller",
       "/Shuffleboard/Intake/IR Sensors/Intake IR Sensor": "Digital Input",
-      "/Shuffleboard/Intake/IR Sensors/Slider IR Sensor": "Digital Input"
+      "/Shuffleboard/Intake/IR Sensors/Slider IR Sensor": "Digital Input",
+      "/Shuffleboard/Intake/Motors/Intake Motor": "Motor Controller",
+      "/Shuffleboard/Intake/Motors/Slider Motor": "Motor Controller",
+      "/Shuffleboard/Shooter/Motors/Shooter Motor": "Motor Controller",
+      "/Shuffleboard/Shooter/Motors/Shooter Motor 2": "Motor Controller",
+      "/Shuffleboard/Subsystems/Subsystem/Drive": "Subsystem",
+      "/Shuffleboard/Subsystems/Subsystem/Elevator": "Subsystem",
+      "/Shuffleboard/Subsystems/Subsystem/Intake": "Subsystem",
+      "/Shuffleboard/Subsystems/Subsystem/Shooter": "Subsystem"
     }
   },
   "NetworkTables": {

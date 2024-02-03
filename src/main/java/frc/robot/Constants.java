@@ -32,4 +32,21 @@ public final class Constants {
         public static final int kSliderIRSensorPort = 2;
     }
 
+    /*
+     * En son ayarlanan shooter hızı slider hızları ve elevator hızları burada
+     * tutulur.
+     */
+    public static final class SpeedConstants {
+        public static final String kAmpShootNameSpeed = "AS-Speed";
+        public static final String kSpeakerShootNameSpeed = "SP-Speed";
+        public static final String kAmpSliderNameSpeed = "AL-Speed";
+        public static final String kSpeakerSliderNameSpeed = "SL-Speed";
+        public static final String kElevatorNameSpeed = "E-Speed";
+        public static final int kAmpShootSpeed = 0;
+        public static final int kSpeakerShootSpeed = 0;
+        public static final int kAmpSliderSpeed = 0;
+        public static final int kSpeakerSliderSpeed = 0;
+        public static final int kElevatorSpeed = 0;
+    }
+
 }

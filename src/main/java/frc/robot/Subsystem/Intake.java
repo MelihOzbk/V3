@@ -1,17 +1,12 @@
 package frc.robot.Subsystem;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Commands;
-import edu.wpi.first.wpilibj2.command.InstantCommand;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-
-import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
 import frc.robot.Constants.IntakeConstants;
-import edu.wpi.first.networktables.GenericEntry;
 import edu.wpi.first.util.sendable.SendableRegistry;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -65,11 +60,11 @@ public class Intake extends SubsystemBase {
     }
 
     public Command runIntake(DoubleSupplier speed) {
-        return run(() -> m_intakeMotor.set(speed.getAsDouble()));
+        return run(() -> m_intakeMotor.set(speed.getAsDouble())).withName("Run Intake");
     }
 
     public Command runSlider(DoubleSupplier speed) {
-        return run(() -> m_slideMotor.set(speed.getAsDouble()));
+        return run(() -> m_slideMotor.set(speed.getAsDouble())).withName("Run Slider");
     }
 
     public boolean getIntakeSensor() {
