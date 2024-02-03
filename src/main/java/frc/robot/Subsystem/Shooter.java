@@ -8,14 +8,21 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import java.util.function.DoubleSupplier;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkBase.IdleMode;
+import com.revrobotics.CANSparkLowLevel.MotorType;
+
 import frc.robot.Constants.ShooterConstants;
 
 public class Shooter extends SubsystemBase {
-    private final WPI_VictorSPX m_shooterMotor = new WPI_VictorSPX(ShooterConstants.kShooterMotorDeviceNumber);
-    private final WPI_VictorSPX m_shooterMotor2 = new WPI_VictorSPX(ShooterConstants.kShooterMotor2DeviceNumber);
+    private final CANSparkMax m_shooterMotor = new CANSparkMax(ShooterConstants.kShooterMotorDeviceNumber,
+            MotorType.kBrushed);
+    private final CANSparkMax m_shooterMotor2 = new CANSparkMax(ShooterConstants.kShooterMotor2DeviceNumber,
+            MotorType.kBrushed);
 
     public Shooter() {
+        m_shooterMotor.setIdleMode(IdleMode.kCoast);
+        m_shooterMotor2.setIdleMode(IdleMode.kCoast);
         ShuffleboardTab shooterTab = Shuffleboard.getTab("Shooter");
         ShuffleboardLayout MotorsLayout = shooterTab.getLayout("Motors", "List Layout").withPosition(0, 0).withSize(2,
                 2);

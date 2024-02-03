@@ -142,6 +142,17 @@
                   "Visuals/Display value": true
                 },
                 {
+                  "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
+                  "_title": "Speed/SP-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
                   "_type": "Number Bar",
                   "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor/Value",
                   "_title": "Shuffleboard/Shooter/Motors/Shooter Motor/Value",
@@ -179,17 +190,6 @@
                   "Visuals/Num tick marks": 5,
                   "Visuals/Show text": true,
                   "Visuals/Orientation": "HORIZONTAL"
-                },
-                {
-                  "_type": "Number Slider",
-                  "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
-                  "_title": "Speed/SP-Speed",
-                  "_glyph": 148,
-                  "_showGlyph": false,
-                  "Slider Settings/Min": -1.0,
-                  "Slider Settings/Max": 1.0,
-                  "Slider Settings/Block increment": 0.0625,
-                  "Visuals/Display value": true
                 }
               ]
             }
@@ -221,17 +221,6 @@
                 {
                   "_type": "Number Slider",
                   "_title": "Speed/E-Speed",
-                  "_glyph": 148,
-                  "_showGlyph": false,
-                  "Slider Settings/Min": -1.0,
-                  "Slider Settings/Max": 1.0,
-                  "Slider Settings/Block increment": 0.0625,
-                  "Visuals/Display value": true
-                },
-                {
-                  "_type": "Number Slider",
-                  "_source0": "network_table:///Shuffleboard/Speed/E-Speed",
-                  "_title": "Shuffleboard/Speed/E-Speed",
                   "_glyph": 148,
                   "_showGlyph": false,
                   "Slider Settings/Min": -1.0,

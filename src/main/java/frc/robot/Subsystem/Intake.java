@@ -5,7 +5,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import java.util.function.DoubleSupplier;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkLowLevel.MotorType;
+
 import frc.robot.Constants.IntakeConstants;
 import edu.wpi.first.util.sendable.SendableRegistry;
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -17,8 +19,10 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
  * Kullanılmayan komutları kaldır ve düzenle
  */
 public class Intake extends SubsystemBase {
-    private final WPI_VictorSPX m_intakeMotor = new WPI_VictorSPX(IntakeConstants.kIntakeMotorDeviceNumber);
-    private final WPI_VictorSPX m_slideMotor = new WPI_VictorSPX(IntakeConstants.kIntakeSliderMotorDeviceNumber);
+    private final CANSparkMax m_intakeMotor = new CANSparkMax(IntakeConstants.kIntakeMotorDeviceNumber,
+            MotorType.kBrushed);
+    private final CANSparkMax m_slideMotor = new CANSparkMax(IntakeConstants.kIntakeSliderMotorDeviceNumber,
+            MotorType.kBrushed);
     public final DigitalInput m_intakeSensor = new DigitalInput(IntakeConstants.kIntakeIRSensorPort);
     public final DigitalInput m_sliderSensor = new DigitalInput(IntakeConstants.kSliderIRSensorPort);
     // public InstantCommand setAutoIntakeFalse = new InstantCommand(() -> value[0]
@@ -27,6 +31,8 @@ public class Intake extends SubsystemBase {
     public final Trigger m_sliderIRSensorTrigger = new Trigger(() -> m_sliderSensor.get());
 
     public Intake() {
+        m_intakeMotor.setIdleMode(CANSparkMax.IdleMode.kCoast);
+        m_slideMotor.setIdleMode(CANSparkMax.IdleMode.kCoast);
         ShuffleboardTab Intake = Shuffleboard.getTab("Intake");
         ShuffleboardLayout IRSensors = Intake.getLayout("IR Sensors", "List Layout").withPosition(0, 0).withSize(2, 2);
         ShuffleboardLayout MotorsLayout = Intake.getLayout("Motors", "List Layout").withPosition(2, 0).withSize(2, 2);

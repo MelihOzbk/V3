@@ -6,7 +6,8 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 import java.util.function.DoubleSupplier;
 
-import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+import com.ctre.phoenix.motorcontrol.NeutralMode;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
@@ -14,10 +15,11 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardLayout;
 import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardTab;
 
 public class Elevator extends SubsystemBase {
-    private final WPI_VictorSPX m_elevatorMotor = new WPI_VictorSPX(ElevatorConstants.kElevatorMotorDeviceNumber);
+    private final WPI_TalonSRX m_elevatorMotor = new WPI_TalonSRX(ElevatorConstants.kElevatorMotorDeviceNumber);
     private final AnalogInput m_elevatorSensor = new AnalogInput(ElevatorConstants.kIRMzSensorPort);
 
     public Elevator() {
+        m_elevatorMotor.setNeutralMode(NeutralMode.Coast);
         Runnable disable = () -> {
             m_elevatorMotor.set(0);
         };
