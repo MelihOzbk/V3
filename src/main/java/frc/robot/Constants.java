@@ -1,7 +1,5 @@
 package frc.robot;
 
-import edu.wpi.first.util.sendable.Sendable;
-
 public final class Constants {
     public static final class DriveConstants {
         public static final int kLeftMotor1DeviceNumber = 5;
@@ -13,7 +11,6 @@ public final class Constants {
     public static final class OIConstants {
         public static final int kDriverControllerPort = 0;
         public static final int kCoDriverControllerPort = 1;
-        public static Sendable kCameraServer;
     }
 
     public static final class ElevatorConstants {
