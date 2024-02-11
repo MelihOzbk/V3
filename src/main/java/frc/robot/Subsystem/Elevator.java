@@ -19,7 +19,7 @@ public class Elevator extends SubsystemBase {
     private final AnalogInput m_elevatorSensor = new AnalogInput(ElevatorConstants.kIRMzSensorPort);
 
     public Elevator() {
-        m_elevatorMotor.setNeutralMode(NeutralMode.Coast);
+        // m_elevatorMotor.setNeutralMode(NeutralMode.Coast);
         Runnable disable = () -> {
             m_elevatorMotor.set(0);
         };

@@ -25,22 +25,19 @@ public class Intake extends SubsystemBase {
             MotorType.kBrushed);
     public final DigitalInput m_intakeSensor = new DigitalInput(IntakeConstants.kIntakeIRSensorPort);
     public final DigitalInput m_sliderSensor = new DigitalInput(IntakeConstants.kSliderIRSensorPort);
-    // public InstantCommand setAutoIntakeFalse = new InstantCommand(() -> value[0]
-    // = false);
     public final Trigger m_intakeIRSensorTrigger = new Trigger(() -> m_intakeSensor.get());
     public final Trigger m_sliderIRSensorTrigger = new Trigger(() -> m_sliderSensor.get());
 
     public Intake() {
-        m_intakeMotor.setIdleMode(CANSparkMax.IdleMode.kCoast);
-        m_slideMotor.setIdleMode(CANSparkMax.IdleMode.kCoast);
         ShuffleboardTab Intake = Shuffleboard.getTab("Intake");
         ShuffleboardLayout IRSensors = Intake.getLayout("IR Sensors", "List Layout").withPosition(0, 0).withSize(2, 2);
         ShuffleboardLayout MotorsLayout = Intake.getLayout("Motors", "List Layout").withPosition(2, 0).withSize(2, 2);
-        MotorsLayout.add("Intake Motor", m_intakeMotor);
-        MotorsLayout.add("Slider Motor", m_slideMotor);
+        MotorsLayout.addDouble("Intake Motor Speed", () -> m_intakeMotor.get());
+        MotorsLayout.addDouble("Slider Motor Speed", () -> m_slideMotor.get());
+
         IRSensors.add("Intake IR Sensor", m_intakeSensor);
         IRSensors.add("Slider IR Sensor", m_sliderSensor);
-        SendableRegistry.addChild(this, m_intakeSensor);
+        // SendableRegistry.addChild(this, m_intakeSensor);
 
         Runnable disable = () -> {
             m_intakeMotor.set(0);
@@ -62,7 +59,6 @@ public class Intake extends SubsystemBase {
             m_intakeMotor.set(0);
             m_slideMotor.set(0);
         });
-
     }
 
     public Command runIntake(DoubleSupplier speed) {

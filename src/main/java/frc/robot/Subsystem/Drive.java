@@ -19,10 +19,7 @@ public class Drive extends SubsystemBase {
     private final DifferentialDrive m_Robot = new DifferentialDrive(m_leftMotor, m_rightMotor);
 
     public Drive() {
-        m_leftMotor.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Coast);
-        m_rightMotor.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Coast);
-        m_leftMotor2.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Coast);
-        m_rightMotor2.setNeutralMode(com.ctre.phoenix.motorcontrol.NeutralMode.Coast);
+
         ShuffleboardTab driveBaseTab = Shuffleboard.getTab("Drivebase");
         driveBaseTab.add("Tank Drive", m_Robot);
         m_leftMotor2.follow(m_leftMotor);

@@ -121,6 +121,17 @@
                 },
                 {
                   "_type": "Number Slider",
+                  "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
+                  "_title": "Speed/SP-Speed",
+                  "_glyph": 148,
+                  "_showGlyph": false,
+                  "Slider Settings/Min": -1.0,
+                  "Slider Settings/Max": 1.0,
+                  "Slider Settings/Block increment": 0.0625,
+                  "Visuals/Display value": true
+                },
+                {
+                  "_type": "Number Slider",
                   "_source0": "network_table:///Shuffleboard/Speed/AS-Speed",
                   "_title": "Speed/AS-Speed",
                   "_glyph": 148,
@@ -134,17 +145,6 @@
                   "_type": "Number Slider",
                   "_source0": "network_table:///Shuffleboard/Speed/AL-Speed",
                   "_title": "Speed/AL-Speed",
-                  "_glyph": 148,
-                  "_showGlyph": false,
-                  "Slider Settings/Min": -1.0,
-                  "Slider Settings/Max": 1.0,
-                  "Slider Settings/Block increment": 0.0625,
-                  "Visuals/Display value": true
-                },
-                {
-                  "_type": "Number Slider",
-                  "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
-                  "_title": "Speed/SP-Speed",
                   "_glyph": 148,
                   "_showGlyph": false,
                   "Slider Settings/Min": -1.0,
@@ -551,6 +551,286 @@
               "_type": "Basic FMS Info",
               "_source0": "network_table:///FMSInfo",
               "_title": "/FMSInfo",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Shuffleboard",
+      "autoPopulate": true,
+      "autoPopulatePrefix": "network_table:///Shuffleboard/",
+      "widgetPane": {
+        "gridSize": 128.0,
+        "showGrid": true,
+        "hgap": 16.0,
+        "vgap": 16.0,
+        "titleType": 0,
+        "tiles": {
+          "0,0": {
+            "size": [
+              3,
+              2
+            ],
+            "content": {
+              "_type": "Differential Drivebase",
+              "_source0": "network_table:///Shuffleboard/Drivebase/Tank Drive",
+              "_title": "Drivebase/Tank Drive",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Wheels/Number of wheels": 4,
+              "Wheels/Wheel diameter": 80.0,
+              "Visuals/Show velocity vectors": true
+            }
+          },
+          "3,0": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Motor Controller",
+              "_source0": "network_table:///Shuffleboard/Elevator/Motors/Elevator Motor",
+              "_title": "Elevator/Motors/Elevator Motor",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Visuals/Orientation": "HORIZONTAL"
+            }
+          },
+          "5,0": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Voltage View",
+              "_source0": "network_table:///Shuffleboard/Elevator/Sensors/Elevator IR Sensor",
+              "_title": "Elevator/Sensors/Elevator IR Sensor",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Range/Min": 0.0,
+              "Range/Max": 5.0,
+              "Range/Center": 0.0,
+              "Visuals/Orientation": "HORIZONTAL",
+              "Visuals/Number of tick marks": 5
+            }
+          },
+          "7,0": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Motor Controller",
+              "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor",
+              "_title": "Shooter/Motors/Shooter Motor",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Visuals/Orientation": "HORIZONTAL"
+            }
+          },
+          "9,0": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Motor Controller",
+              "_source0": "network_table:///Shuffleboard/Shooter/Motors/Shooter Motor 2",
+              "_title": "Shooter/Motors/Shooter Motor 2",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Visuals/Orientation": "HORIZONTAL"
+            }
+          },
+          "11,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///Shuffleboard/Intake/IR Sensors/Intake IR Sensor/Value",
+              "_title": "Intake/IR Sensors/Intake IR Sensor/Value",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "12,0": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///Shuffleboard/Intake/IR Sensors/Slider IR Sensor/Value",
+              "_title": "Intake/IR Sensors/Slider IR Sensor/Value",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "3,1": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Motor Controller",
+              "_source0": "network_table:///Shuffleboard/Intake/Motors/Intake Motor",
+              "_title": "Intake/Motors/Intake Motor",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Visuals/Orientation": "HORIZONTAL"
+            }
+          },
+          "5,1": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Motor Controller",
+              "_source0": "network_table:///Shuffleboard/Intake/Motors/Slider Motor",
+              "_title": "Intake/Motors/Slider Motor",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Visuals/Orientation": "HORIZONTAL"
+            }
+          },
+          "7,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///Shuffleboard/Speed/AS-Speed",
+              "_title": "Speed/AS-Speed",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "8,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///Shuffleboard/Speed/SP-Speed",
+              "_title": "Speed/SP-Speed",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "9,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///Shuffleboard/Speed/AL-Speed",
+              "_title": "Speed/AL-Speed",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "10,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///Shuffleboard/Speed/SL-Speed",
+              "_title": "Speed/SL-Speed",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "11,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Text View",
+              "_source0": "network_table:///Shuffleboard/Speed/E-Speed",
+              "_title": "Speed/E-Speed",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "12,1": {
+            "size": [
+              1,
+              1
+            ],
+            "content": {
+              "_type": "Boolean Box",
+              "_source0": "network_table:///Shuffleboard/Auto Control/Auto Intake/OTO.INTAKE DURUMU",
+              "_title": "Auto Control/Auto Intake/OTO.INTAKE DURUMU",
+              "_glyph": 148,
+              "_showGlyph": false,
+              "Colors/Color when true": "#7CFC00FF",
+              "Colors/Color when false": "#8B0000FF"
+            }
+          },
+          "0,2": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Basic Subsystem",
+              "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Drive",
+              "_title": "Subsystems/Subsystem/Drive",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "2,2": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Basic Subsystem",
+              "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Elevator",
+              "_title": "Subsystems/Subsystem/Elevator",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "4,2": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Basic Subsystem",
+              "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Shooter",
+              "_title": "Subsystems/Subsystem/Shooter",
+              "_glyph": 148,
+              "_showGlyph": false
+            }
+          },
+          "6,2": {
+            "size": [
+              2,
+              1
+            ],
+            "content": {
+              "_type": "Basic Subsystem",
+              "_source0": "network_table:///Shuffleboard/Subsystems/Subsystem/Intake",
+              "_title": "Subsystems/Subsystem/Intake",
               "_glyph": 148,
               "_showGlyph": false
             }
